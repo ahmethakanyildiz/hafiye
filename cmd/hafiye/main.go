@@ -85,7 +85,7 @@ func main() {
    \ \__\ \__\ \__\ \__\ \__\   \ \__\__/  / /      \ \_______\
     \|__|\|__|\|__|\|__|\|__|    \|__|\___/ /        \|_______|
                                      \|___|/`)
-		fmt.Fprintln(os.Stderr, "Hafiye - Secret Scanner (v1.2)")
+		fmt.Fprintln(os.Stderr, "Hafiye - Secret Scanner (v1.3)")
 		fmt.Fprintln(os.Stderr)
 		fmt.Fprintln(os.Stderr, "Usage:")
 		fmt.Fprintln(os.Stderr, "  hafiye -d <dir> [options]")
@@ -102,7 +102,7 @@ func main() {
 		fmt.Fprintln(os.Stderr, "  -dm, --dont-mask                                			Disable masking (prints secrets in cleartext)")
 		fmt.Fprintln(os.Stderr, "  -ep, --enable-prefix-for-assign-idenitifers     			Enable prefix for assign identifiers (It can increase FPs)")
 		fmt.Fprintln(os.Stderr, "  -th, --ml-threshold                             			ML Threshold (It can increase FPs or FNs)")
-		fmt.Fprintln(os.Stderr, "  -th, --disable-ml-verification-for-assign-identifiers    Disable ML verification for assign identifiers (It will increase FPs significantly)")
+		fmt.Fprintln(os.Stderr, "  -th, --disable-ml-verification-for-assign-identifiers                 Disable ML verification for assign identifiers (It will increase FPs significantly)")
 		fmt.Fprintln(os.Stderr)
 		fmt.Fprintln(os.Stderr, "Examples:")
 		fmt.Fprintln(os.Stderr, "  hafiye -d ./myproj/.")
@@ -228,7 +228,7 @@ func main() {
    \ \__\ \__\ \__\ \__\ \__\   \ \__\__/  / /      \ \_______\
     \|__|\|__|\|__|\|__|\|__|    \|__|\___/ /        \|_______|
                                      \|___|/
-Hafiye - Secret Scanner (v1.2)`)
+Hafiye - Secret Scanner (v1.3)`)
 					if len(allFindings) == 0 {
 						fmt.Println("Congratulations, there is no secret leak in your project!")
 					} else {

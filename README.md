@@ -14,7 +14,7 @@ Hafiye is a lightweight yet powerful secret scanning tool written in Go, designe
    \ \__\ \__\ \__\ \__\ \__\   \ \__\__/  / /      \ \_______\
     \|__|\|__|\|__|\|__|\|__|    \|__|\___/ /        \|_______|
                                      \|___|/
-Hafiye - Secret Scanner (v1.2)
+Hafiye - Secret Scanner (v1.3)
 
 Usage:
   hafiye -d <dir> [options]
