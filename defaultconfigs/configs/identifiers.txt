@@ -1,0 +1,11 @@
+password
+passwd
+passphrase
+secret
+key
+token
+authorization
+auth
+pwd
+sourcegraph
+sgp

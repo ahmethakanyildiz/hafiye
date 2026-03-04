@@ -1,0 +1,59 @@
+[[rule]]
+id = true-false-null
+description = known default value
+regex = (?i)^(true|false|null)$
+
+[[rule]]
+id = positional-dollar-number
+description = shell positional parameter
+regex = ^\$(?:\d+|{\d+})$
+
+[[rule]]
+id = dollar-simple-variable
+description = simple shell variable
+regex = ^\$(?:[A-Z_]+|[a-z_]+)$
+
+[[rule]]
+id = dollar-braced-variable
+description = braced shell variable
+regex = ^\${(?:[A-Z_]+|[a-z_]+)}$
+
+[[rule]]
+id = handlebars-expression
+description = generic handlebars template expression
+regex = ^\{\{[ \t]*[\w ().|]+[ \t]*}}$
+
+[[rule]]
+id = github-actions-expression
+description = GitHub Actions style expression
+regex = ^\$\{\{[ \t]*(?:(?:env|github|secrets|vars)(?:\.[A-Za-z]\w+)+[\w "'&./=|]*)[ \t]*}}$
+
+[[rule]]
+id = windows-env-variable
+description = Windows environment variable reference
+regex = ^%(?:[A-Z_]+|[a-z_]+)%$
+
+[[rule]]
+id = printf-format-specifier
+description = printf-style format specifier
+regex = ^%[+\-# 0]?[bcdeEfFgGoOpqstTUvxX]$
+
+[[rule]]
+id = numeric-braced-placeholder
+description = numeric placeholder in braces
+regex = ^\{\d{0,2}}$
+
+[[rule]]
+id = at-symbol-variable
+description = at-wrapped variable
+regex = ^@(?:[A-Z_]+|[a-z_]+)@$
+
+[[rule]]
+id = macos-user-path
+description = macOS user home path
+regex = ^/Users/(?i)[a-z0-9]+/[\w .-/]+$
+
+[[rule]]
+id = common-unix-path
+description = common Unix system path
+regex = ^/(?:bin|etc|home|opt|tmp|usr|var)/[\w ./-]+$

@@ -1,0 +1,124 @@
+[[rule]]
+id = image-extensions
+description = Ignore common image file extensions
+value = (?i)\.(?:bmp|gif|jpe?g|png|svg|tiff?)$
+
+[[rule]]
+id = font-extensions
+description = Ignore common font file extensions
+value = (?i)\.(?:eot|[ot]tf|woff2?)$
+
+[[rule]]
+id = binary-and-doc-extensions
+description = Ignore common binary, IDE index, and document extensions (dll/pdb/exe/pdf/xlsx/etc.)
+value = (?i)\.(?:docx?|xlsx?|pdf|socket|bin|vsidx|v2|suo|wsuo|.dll|pdb|exe|gltf)$
+
+[[rule]]
+id = archive-extensions
+description = Ignore common compressed and archive file extensions (zip/tar/gz/rar/7z/etc.)
+value = (?i)\.(?:zip|tar|gz|tgz|bz2|xz|7z|rar|lz|lzma|zst|cab|iso|jar|war|ear|apk|ipa)$
+
+[[rule]]
+id = go-module-files
+description = Ignore Go module/work files (go.mod/go.sum/go.work)
+value = go\.(?:mod|sum|work(?:\.sum)?)$
+
+[[rule]]
+id = vendor-modules-txt
+description = Ignore Go vendor/modules.txt
+value = (?:^|/)vendor/modules\.txt$
+
+[[rule]]
+id = vendor-known-hosts
+description = Ignore vendored Go dependency trees under common module hosts
+value = (?:^|/)vendor/(?:github\.com|golang\.org/x|google\.golang\.org|gopkg\.in|istio\.io|k8s\.io|sigs\.k8s\.io)(?:/.*)?$
+
+[[rule]]
+id = gradle-wrapper-scripts
+description = Ignore Gradle wrapper scripts (gradlew/gradlew.bat)
+value = (?:^|/)gradlew(?:\.bat)?$
+
+[[rule]]
+id = gradle-lockfile
+description = Ignore Gradle lockfile
+value = (?:^|/)gradle\.lockfile$
+
+[[rule]]
+id = maven-wrapper-scripts
+description = Ignore Maven wrapper scripts (mvnw/mvnw.cmd)
+value = (?:^|/)mvnw(?:\.cmd)?$
+
+[[rule]]
+id = maven-wrapper-downloader
+description = Ignore Maven Wrapper Downloader Java source
+value = (?:^|/)\.mvn/wrapper/MavenWrapperDownloader\.java$
+
+[[rule]]
+id = node-modules-dir
+description = Ignore node_modules directory tree
+value = (?:^|/)node_modules(?:/.*)?$
+
+[[rule]]
+id = js-lockfiles
+description = Ignore JavaScript lockfiles (package-lock/pnpm-lock/yarn.lock/etc.)
+value = (?:^|/)(?:deno\.lock|npm-shrinkwrap\.json|package-lock\.json|pnpm-lock\.yaml|yarn\.lock)$
+
+[[rule]]
+id = bower-components-dir
+description = Ignore bower_components directory tree
+value = (?:^|/)bower_components(?:/.*)?$
+
+[[rule]]
+id = minified-vendor-js
+description = Ignore common vendored/minified JS bundles (angular/bootstrap/jquery/plotly/swagger-ui)
+value = (?:^|/)(?:angular|bootstrap|jquery(?:-?ui)?|plotly|swagger-?ui)[a-zA-Z0-9.-]*(?:\.min)?\.js(?:\.map)?$
+
+[[rule]]
+id = javascript-json
+description = Ignore javascript.json (tooling metadata)
+value = (?:^|/)javascript\.json$
+
+[[rule]]
+id = python-lockfiles
+description = Ignore Python lockfiles (Pipfile.lock/poetry.lock)
+value = (?:^|/)(?:Pipfile|poetry)\.lock$
+
+[[rule]]
+id = python-virtualenv-libs
+description = Ignore virtualenv library directories (venv/virtualenv lib paths)
+value = (?i)(?:^|/)(?:v?env|virtualenv)/lib(?:64)?(?:/.*)?$
+
+[[rule]]
+id = python-stdlib-like-paths
+description = Ignore common Python library installation paths
+value = (?i)(?:^|/)(?:lib(?:64)?/python[23](?:\.\d{1,2})+|python/[23](?:\.\d{1,2})+/lib(?:64)?)(?:/.*)?$
+
+[[rule]]
+id = python-dist-info
+description = Ignore Python .dist-info metadata directories
+value = (?i)(?:^|/)[a-z0-9_.]+-[0-9.]+\.dist-info(?:/.+)?$
+
+[[rule]]
+id = ruby-vendor-bundle
+description = Ignore Ruby vendor bundle paths
+value = (?:^|/)vendor/(?:bundle|ruby)(?:/.*?)?$
+
+[[rule]]
+id = ruby-gem-files
+description = Ignore Ruby .gem package files
+value = \.gem$
+
+[[rule]]
+id = maven-verification-metadata
+description = Ignore Maven/Gradle dependency verification metadata
+value = verification-metadata\.xml
+
+[[rule]]
+id = vs-database-refactorlog
+description = Ignore Visual Studio Database.refactorlog
+value = Database.refactorlog
+
+[[rule]]
+id = git-dir
+description = Ignore .git directory itself
+value = (?:^|/)\.git$
