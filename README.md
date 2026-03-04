@@ -31,7 +31,7 @@ Options:
   -dm, --dont-mask                                                      Disable masking (prints secrets in cleartext)
   -ep, --enable-prefix-for-assign-idenitifers                           Enable prefix for assign identifiers (It can increase FPs)
   -th, --ml-threshold                                                   ML Threshold (It can increase FPs or FNs)
-  -th, --disable-ml-verification-for-assign-identifiers    Disable ML verification for assign identifiers (It will increase FPs significantly)
+  -th, --disable-ml-verification-for-assign-identifiers                 Disable ML verification for assign identifiers (It will increase FPs significantly)
 
 Examples:
   hafiye -d ./myproj/.
