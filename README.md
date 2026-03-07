@@ -1,5 +1,5 @@
 ## HAFIYE: Secret Scanner
-<img src="https://raw.githubusercontent.com/ahmethakanyildiz/hafiye/refs/heads/main/hafiye_logo.png" width="200">
+<img src="https://raw.githubusercontent.com/ahmethakanyildiz/hafiye/refs/heads/main/hafiye_banner.png">
 
 Hafiye is a lightweight yet powerful secret scanning tool written in Go, designed to detect hardcoded credentials and sensitive data across source code repositories with high precision and low noise. It combines regex-based pattern detection, identifier-aware scanning, entropy and code-like heuristics, and optional machine learning-based false positive reduction to improve accuracy. Hafiye supports configurable rules, ignore mechanisms, cross-platform execution, and parallel scanning for performance. It generates standardized SARIF 2.1.0 reports for seamless integration with security platforms and CI/CD pipelines, while offering flexible CLI options for customization and automation.
 
@@ -50,4 +50,12 @@ $env:GOOS="windows"; $env:GOARCH="amd64"; $env:CGO_ENABLED="0"; go build -o hafi
 for Linux
 ```
 $env:GOOS="linux"; $env:GOARCH="amd64"; $env:CGO_ENABLED="0"; go build -o hafiye ./cmd/hafiye
+```
+
+### Test
+
+You can test Hafiye FP elimination method with [hafiye-label-train-predict](https://github.com/ahmethakanyildiz/hafiye-label-train-predict) mini projects as:
+
+```
+go run . predict --model model.json --value YOUR_SECRET
 ```
