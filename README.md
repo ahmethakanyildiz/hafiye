@@ -54,7 +54,7 @@ $env:GOOS="linux"; $env:GOARCH="amd64"; $env:CGO_ENABLED="0"; go build -o hafiye
 
 ### Test
 
-You can test Hafiye FP elimination method with [hafiye-label-train-predict](https://github.com/ahmethakanyildiz/hafiye-label-train-predict) mini projects as:
+You can test Hafiye FP elimination method with [hafiye-label-train-predict](https://github.com/ahmethakanyildiz/hafiye-label-train-predict) mini project as:
 
 ```
 go run . predict --model model.json --value YOUR_SECRET
